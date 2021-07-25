@@ -28,22 +28,22 @@ var user = {
  if (user.hasOwnProperty("age")) {
     console.log("Yes")
 } else {
-    console.log("No, User Object has no Age Propery in it<br />")
+    console.log("sorry")
  }
  if (user.hasOwnProperty("country")) {
-    console.log("Yes, User Object has Country Propery in it<br />")
+    console.log("sorry")
  } else {
-    console.log("No, User Object has no Country Propery in it<br />")
+    console.log("sorry")
 }
  if (user.hasOwnProperty("firstName")) {
-    console.log("Yes, User Object has firstName Propery in it<br />")
+    console.log("sorry")
  } else {
-     console.log("No, User Object has no firstName Propery in it<br />")
+     console.log("sorry")
  }
  if (user.hasOwnProperty("lastName")) {
-     console.log("Yes, User Object has lastName Propery in it<br />")
+     console.log("Sorry")
  } else {
-     console.log("No, User Object has no lastName Propery in it<br />")
+     console.log("Sorry")
  }
 
 
@@ -65,15 +65,19 @@ function User(Name, Gender, Address, Education, Profession) {
     this.Education = Education;
     this.Profession = Profession;
 }
+var arr = []
 function getsubmit() {
-    var userName = document.getElementById("Name")
-    var userGender = document.getElementById("Gender")
-    var userAddress = document.getElementById("Address")
-    var userEducation = document.getElementById("Education")
-    var userProfession = document.getElementById("Profession")
-    var arr = []
-    var myuser2 = new User(userName.value, userGender.value, userAddress.value, userEducation.value, userProfession.value);
+    Name = document.getElementById("Name").value;
+    Gender = document.getElementById("Gender").value;
+    Address = document.getElementById("Address").value;
+    Education = document.getElementById("Education").value;
+    Profession = document.getElementById("Profession").value;
+    
+    
+    
+    // var arr = []
+    var myuser2 = new User(Name, Gender, Address, Education, Profession);
     arr.push(myuser2);
-    console.log(arr)
+    console.log(arr);
     
 }
